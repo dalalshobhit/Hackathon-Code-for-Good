@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ask</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/angular.js"></script>
+		<script src="js/angular-route.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="right-sidebar" ng-app="garden">
+
+		<!-- Header -->
+			<div id="header-wrapper">
+				<div id="header">
+					
+                <!-- Logo -->
+                	<img src="images/NWF.jpg" alt="" />
+                    <h1><a href="/">My Garden</a></h1>
+
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                       		<li><a href="/">Home</a></li>
+ 			                <li><a href="/recommendations">Recommendations</a></li>
+ 			                <li class="current"><a href="/questions">FAQ</a></li>
+                            <li><a href="/success">Success Stories</a></li>
+                            <li><a href="/profile">My Profile</a></li>
+                            <li>Sign In</a></li>
+                            <li><strong><a>Certify Now</a></strong></li>
+                        </ul>
+                    </nav>
+                    
+				</div>
+			</div>
+		
+		<!-- Main -->
+			<div id="main-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="10u">
+							
+							<!-- Content -->
+							<article class="box post" ng-controller="AskCtrl">
+								<header>
+									<h2>Ask a Question</h2>
+									<p>Get your fellow garden enthusiasts to help!</p>
+								</header>
+								<form class="form" ng-submit="askQuestion()">
+									<h3>Question Title:</h3>
+									<input type="text" ng-model="formData.title" placeholder="Your question title goes here.">
+									<br/>
+									<h3>Question Body:</h3>
+									<textarea placeholder="Your detailed question goes here." cols="40" rows="5" ng-model="formData.body"></textarea>
+									<br/>
+									<input type="submit" value="Ask">
+								</form>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer-wrapper">
+				<section id="footer" class="container">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>&copy; Team 12. All rights reserved.</li>
+									</ul>
+								</div>
+
+						</div>
+					</div>
+				</section>
+			</div>
+
+	</body>
+</html>
